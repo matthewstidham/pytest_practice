@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "/home/matthew/Documents/pytest_practice/MyProject/./test_noob.py", line 27, in <module>
+    main()
+  File "/home/matthew/Documents/pytest_practice/MyProject/./test_noob.py", line 23, in main
+    test_spam()
+  File "/home/matthew/Documents/pytest_practice/MyProject/./test_noob.py", line 16, in test_spam
+    df = pd.read_csv('oops.csv')
+  File "/home/matthew/anaconda3/lib/python3.9/site-packages/pandas/util/_decorators.py", line 211, in wrapper
+    return func(*args, **kwargs)
+  File "/home/matthew/anaconda3/lib/python3.9/site-packages/pandas/util/_decorators.py", line 331, in wrapper
+    return func(*args, **kwargs)
+  File "/home/matthew/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 950, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/matthew/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 605, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/matthew/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1442, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/home/matthew/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1753, in _make_engine
+    return mapping[engine](f, **self.options)
+  File "/home/matthew/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 79, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 554, in pandas._libs.parsers.TextReader.__cinit__
+pandas.errors.EmptyDataError: No columns to parse from file
